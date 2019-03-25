@@ -1,28 +1,45 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import React, { Component } from "react";
+import { BrowserRouter, Router, Route, Link } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
+import UserContext from "./context/UserContext";
+import Landing from './components/pages/landing';
+import Products from './components/pages/products.js'
+import Coupons from './components/pages/coupons.js'
+import LoginAndRegister from './components/pages/loginRegister'
+import ShoppingList from './components/pages/shoppingList.js'
+import AboutUs from './components/pages/aboutUs.js'
+
 
 class App extends Component {
+
+  state = [
+    { user: null }
+  ]
+
+  setUser = (user) => {
+    this.setState({ user });
+  }
+
   render() {
+    const { user } = this.state;
+    const setUser = this.setUser;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <BrowserRouter>
+          <UserContext.Provider value={{ setUser: setUser, user: user }}>
+            <Route exact path='/' component={Landing} />
+            <Route exact path='/products' component={Products} />
+            <Route exact path='/coupons' component={Coupons} />
+            <Route exact path='/login' component={LoginAndRegister} />
+            <Route exact path='/shopping-list' component={ShoppingList} />
+            <Route exact path='/about-us' component={AboutUs} />
+          </UserContext.Provider>
+        </BrowserRouter>
+      </React.Fragment>
+
     );
   }
 }
 
-export default App;
+export default App
