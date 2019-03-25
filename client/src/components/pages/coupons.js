@@ -4,18 +4,18 @@ import React from 'react';
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
 
-class Landing extends React.Component {
+class Coupons extends React.Component {
     state = {}
 
     render() {
         return (
-            <div className='page landing'>
+            <div className='page Coupons'>
             <Navbar />
                 <Sidebar />
-            <h1>Landing Page</h1>
+            <h1>Coupons Page</h1>
                 </div>
         )
     }
 }
 
-export default Landing;
+export default Coupons;

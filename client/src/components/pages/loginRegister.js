@@ -4,18 +4,18 @@ import React from 'react';
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
 
-class Landing extends React.Component {
+class LoginAndRegister extends React.Component {
     state = {}
 
     render() {
         return (
-            <div className='page landing'>
-            <Navbar />
+            <div className='page LoginAndRegister'>
+                <Navbar />
                 <Sidebar />
-            <h1>Landing Page</h1>
-                </div>
+                <h1>Login and Register Page</h1>
+            </div>
         )
     }
 }
 
-export default Landing;
+export default LoginAndRegister;
