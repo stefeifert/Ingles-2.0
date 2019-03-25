@@ -3,6 +3,7 @@ import React from 'react';
 // import './landing.css'
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
+import LoginForm from '../LoginForm'
 
 class LoginAndRegister extends React.Component {
     state = {}
@@ -13,6 +14,7 @@ class LoginAndRegister extends React.Component {
                 <Navbar />
                 <Sidebar />
                 <h1>Login and Register Page</h1>
+                <LoginForm />
             </div>
         )
     }
