@@ -1,16 +1,16 @@
 const express = require("express");
 const authWare = require("./middleware/authware");
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+mongoose.connect('mongodb://localhost/noteApp', { useNewUrlParser: true });
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-mongoose.connect("mongodb://localhost/authExample", { useNewUrlParser: true });
 
 app.use(authWare);
 
@@ -25,5 +25,6 @@ require('./routes/api-routes')(app);
 
 // Start the API server
 app.listen(PORT, function() {
-console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+
 });

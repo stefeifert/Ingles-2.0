@@ -49,6 +49,4 @@ module.exports = function (app) {
 		});
 	});
 
-
-
 }

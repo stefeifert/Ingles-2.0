@@ -1,24 +1,28 @@
+
 import React, { Component } from "react";
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LoginPage from "./components/LoginPage";
 import HomePage from "./components/HomePage";
 import UserContext from "./context/UserContext";
+import { Route, BrowserRouter, withRouter } from 'react-router-dom';
+import Landing from './components/pages/landing';
+
 
 class App extends Component {
 
-  state = {
+  state = 
     user: null
   }
 
   setUser = (user) => {
 	  this.setState({ user });
-  }
 
   render() {
 	const {user} = this.state;
 	const setUser = this.setUser;
     return (
+
 		<Router>
 			<div>
 				<header>
@@ -32,6 +36,13 @@ class App extends Component {
 				</UserContext.Provider>
 			</div>
 		</Router>
+
+      <React.Fragment>
+        <BrowserRouter>
+          <Route exact path='/' render={(props) => <Landing />} />
+        </BrowserRouter>
+      </React.Fragment>
+
     );
   }
 }
