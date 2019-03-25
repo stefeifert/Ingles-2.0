@@ -1,6 +1,8 @@
 import React from 'react';
 // import { Link } from 'react-router-dom'
 // import './landing.css'
+import Navbar from '../navbar'
+import Sidebar from '../sidebar'
 
 class AboutUs extends React.Component {
     state = {}
@@ -8,8 +10,10 @@ class AboutUs extends React.Component {
     render() {
         return (
             <div className='page AboutUs'>
-            <h1>About Us Page</h1>
-                </div>
+                <Navbar />
+                <Sidebar />
+                <h1>About Us Page</h1>
+            </div>
         )
     }
 }

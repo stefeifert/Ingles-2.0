@@ -4,18 +4,18 @@ import React from 'react';
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
 
-class Coupons extends React.Component {
+class LoginAndRegister extends React.Component {
     state = {}
 
     render() {
         return (
-            <div className='page Coupons'>
-            <Navbar />
+            <div className='page LoginAndRegister'>
+                <Navbar />
                 <Sidebar />
-            <h1>Coupons Page</h1>
-                </div>
+                <h1>Login and Register Page</h1>
+            </div>
         )
     }
 }
 
-export default Coupons;
+export default LoginAndRegister;
