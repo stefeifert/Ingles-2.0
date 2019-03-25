@@ -1,11 +1,8 @@
 
 import React, { Component } from "react";
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { BrowserRouter, Router, Route, Link } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
-import LoginPage from "./components/LoginPage";
-import HomePage from "./components/HomePage";
 import UserContext from "./context/UserContext";
-import { Route, BrowserRouter, withRouter } from 'react-router-dom';
 import Landing from './components/pages/landing';
 import Products from './components/pages/products.js'
 import Coupons from './components/pages/coupons.js'
@@ -16,40 +13,28 @@ import AboutUs from './components/pages/aboutUs.js'
 
 class App extends Component {
 
-  state = 
-    user: null
-  }
+  state = [
+    { user: null }
+  ]
 
   setUser = (user) => {
-	  this.setState({ user });
+    this.setState({ user });
+  }
 
   render() {
-	const {user} = this.state;
-	const setUser = this.setUser;
+    const { user } = this.state;
+    const setUser = this.setUser;
     return (
-
-		<Router>
-			<div>
-				<header>
-					<nav>
-						<Link to="/">Home</Link> | <Link to="/login">Login</Link>
-					</nav>
-				</header>
-				<UserContext.Provider value={{ setUser, user }}>
-					<ProtectedRoute exact path="/" component={HomePage} />
-					<Route exact path="/login" component={LoginPage} />
-				</UserContext.Provider>
-			</div>
-		</Router>
-
       <React.Fragment>
         <BrowserRouter>
-          <Route exact path='/' render={(props) => <Landing />} />
-          <Route exact path='/products' render={(props) => <Products />} />
-          <Route exact path='/coupons' render={(props) => <Coupons />} />
-          <Route exact path='/login' render={(props) => <LoginAndRegister />} />
-          <Route exact path='/shopping-list' render={(props) => <ShoppingList />} />
-          <Route exact path='/about-us' render={(props) => <AboutUs />} />
+          <UserContext.Provider value={{ setUser: setUser, user: user }}>
+            <Route exact path='/' component={Landing} />
+            <Route exact path='/products' component={Products} />
+            <Route exact path='/coupons' component={Coupons} />
+            <Route exact path='/login' component={LoginAndRegister} />
+            <Route exact path='/shopping-list' component={ShoppingList} />
+            <Route exact path='/about-us' component={AboutUs} />
+          </UserContext.Provider>
         </BrowserRouter>
       </React.Fragment>
 
