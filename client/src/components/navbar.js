@@ -15,7 +15,6 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            <div className='page Navbar'>
               <h3>Ingles</h3>
               <ul>
                   <li><a href='coupons'>Coupons</a></li>
@@ -28,10 +27,14 @@ class Navbar extends React.Component {
                 </ul>
               ) : (
                 <ul>
-                  <li>
-                    <Link to="/login">Login</Link>
-                  </li>
-                </ul>
+                <li><a href='/'>Home</a></li>
+                <li><a href='/login'>Login Here</a></li>
+                <li><a href='products'>Product List</a></li>
+                <li><a href='coupons'>Coupons</a></li>
+                <li><a href='shopping-list'>Saved Shopping List</a></li>
+                <li><a href='store-locator'>Store Locator</a></li>
+                <li><a href='about-us'>About Us</a></li>
+            </ul>
               )}
             </div>
         )
