@@ -6,6 +6,9 @@ import Sidebar from '../sidebar';
 
 import CurrentLocation from '../gmap';
 
+// GOOGLE PLACES URL, RETURNS JSON LIST OF INGLES MARKETS
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=33.776302,%20-84.390012&radius=24140.2&type=store&keyword=ingles+market&key=AIzaSyBGYr7DPVtqsuuoyqzRuB72bRUI0BbJ2Sg
+
 export class StoreLocator extends Component {
     state = {
         showingInfoWindow: false,
