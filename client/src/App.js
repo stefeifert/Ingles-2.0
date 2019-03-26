@@ -8,6 +8,7 @@ import Products from './components/pages/products.js'
 import Coupons from './components/pages/coupons.js'
 import LoginAndRegister from './components/pages/loginRegister'
 import ShoppingList from './components/pages/shoppingList.js'
+import StoreLocator from './components/pages/locator.js'
 import AboutUs from './components/pages/aboutUs.js'
 
 
@@ -33,6 +34,7 @@ class App extends Component {
             <Route exact path='/coupons' component={Coupons} />
             <Route exact path='/login' component={LoginAndRegister} />
             <Route exact path='/shopping-list' component={ShoppingList} />
+            <Route exact path='/store-locator' component={StoreLocator} />
             <Route exact path='/about-us' component={AboutUs} />
           </UserContext.Provider>
         </BrowserRouter>
