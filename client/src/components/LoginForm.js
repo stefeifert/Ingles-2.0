@@ -38,7 +38,7 @@ class LoginForm extends Component {
 				/>
 				<input
 					type="password"
-					name="password" 
+					name="password"
 					value={this.state.password}
 					onChange={this.changeHandler}
 				/>
