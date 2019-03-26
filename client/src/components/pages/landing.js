@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
-import Carousel from '../Carousel';
+import Carousel from '../Carousel/Carousel';
 
 const Landing = props => {
     return (

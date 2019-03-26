@@ -1,5 +1,7 @@
 import React from 'react';
 import Carousel from "react-bootstrap/Carousel";
+// import bobIngles_1 from './images/bobIngles_1.jpeg';
+import './styles.css';
 
 class ControlledCarousel extends React.Component {
     constructor(props, context) {
@@ -32,7 +34,7 @@ class ControlledCarousel extends React.Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src='client/src/components/images/ingles2.jpeg'
+              src="/images/bobIngles_1.jpeg"
               alt="First slide"
             />
             <Carousel.Caption>
@@ -43,7 +45,7 @@ class ControlledCarousel extends React.Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="../client/src/components/images/ingles2.jpeg"
+              src="/images/ingles2.jpeg"
               alt="Second slide"
             />
   
@@ -55,7 +57,7 @@ class ControlledCarousel extends React.Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="holder.js/800x400?text=Third slide&bg=20232a"
+              src="/images/hero.jpeg"
               alt="Third slide"
             />
   
