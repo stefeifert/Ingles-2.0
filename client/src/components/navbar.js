@@ -15,6 +15,7 @@ class Navbar extends React.Component {
 
     render() {
         return (
+            <div>
               <h3>Ingles</h3>
               <ul>
                   <li><a href='coupons'>Coupons</a></li>
@@ -24,6 +25,14 @@ class Navbar extends React.Component {
                 <ul>
                   <li><a href='shopping-list'>Saved Shopping List</a></li>
                   <li><button onClick={this.logout}>Logout</button></li>
+                  <li>-----</li>
+                  <li><a href='/'>Home</a></li>
+                <li><a href='/login'>Login Here</a></li>
+                <li><a href='products'>Product List</a></li>
+                <li><a href='coupons'>Coupons</a></li>
+                <li><a href='shopping-list'>Saved Shopping List</a></li>
+                <li><a href='store-locator'>Store Locator</a></li>
+                <li><a href='about-us'>About Us</a></li>
                 </ul>
               ) : (
                 <ul>
