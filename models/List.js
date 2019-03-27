@@ -6,7 +6,12 @@ const Schema = mongoose.Schema;
  */
 var ListSchema = new Schema({
   user_id: Number,
-  products: [String]
+  products: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Item'
+    }
+  ]
 });
 
 const List = mongoose.model("List", ListSchema);
