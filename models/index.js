@@ -1,3 +1,3 @@
 module.exports = {
-  Note: require("./Note")
+  List: require("./List")
 }

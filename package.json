@@ -27,6 +27,7 @@
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.0",
     "mongoose": "^5.4.19",
+    "mongoose-data-seed": "^1.0.7",
     "mysql2": "^1.6.4",
     "react": "^16.8.5",
     "react-burger-menu": "^2.6.5",
