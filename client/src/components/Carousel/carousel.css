@@ -12,7 +12,6 @@ p {
 }
 
 .img-size {
-    /* height: 70vh; */
     width: auto !important;
     box-sizing: inherit;
 }
