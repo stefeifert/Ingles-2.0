@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from "react-bootstrap/Carousel";
-// import bobIngles_1 from './images/bobIngles_1.jpeg';
-import './styles.css';
+import Container from 'react-bootstrap/Container';
+import './carousel.css';
 
 class ControlledCarousel extends React.Component {
     constructor(props, context) {
@@ -26,6 +26,9 @@ class ControlledCarousel extends React.Component {
       const { index, direction } = this.state;
   
       return (
+        <Container className = 'container'>
+
+        
         <Carousel
           activeIndex={index}
           direction={direction}
@@ -33,9 +36,10 @@ class ControlledCarousel extends React.Component {
         >
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src="/images/bobIngles_1.jpeg"
+              className="d-block w-100 img-size"
+              src="/images/inglesHero_1sm.jpg"
               alt="First slide"
+              id="imgBox"
             />
             <Carousel.Caption>
               <h3>First slide label</h3>
@@ -44,9 +48,10 @@ class ControlledCarousel extends React.Component {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src="/images/ingles2.jpeg"
+              className="d-block w-100 img-size"
+              src="/images/inglesHero_2sm.jpg"
               alt="Second slide"
+              id="imgBox"
             />
   
             <Carousel.Caption>
@@ -56,9 +61,10 @@ class ControlledCarousel extends React.Component {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src="/images/hero.jpeg"
+              className="d-block w-100 img-size"
+              src="/images/inglesHero_3sm.jpg"
               alt="Third slide"
+              id="imgBox"
             />
   
             <Carousel.Caption>
@@ -69,6 +75,7 @@ class ControlledCarousel extends React.Component {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        </Container>
       );
     }
   }
