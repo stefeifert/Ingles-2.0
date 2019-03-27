@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../navbar'
-import Sidebar from '../sidebar'
+import Sidebar from '../sidebar';
 
 const Landing = props => {
     return (
