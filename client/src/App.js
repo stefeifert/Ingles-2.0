@@ -15,9 +15,9 @@ import AboutUs from './components/pages/aboutUs.js'
 
 class App extends Component {
 
-  state = [
-    { user: null }
-  ]
+  state = {
+    user: null 
+  }
 
   setUser = (user) => {
     this.setState({ user });
