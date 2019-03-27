@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
+const axios = require('axios');
 
 module.exports = function(app) {
   app.post('/api/authenticate', function(req, res) {
@@ -47,6 +48,16 @@ module.exports = function(app) {
   app.get('/api/public', function(req, res) {
     res.json({
       message: 'This is just boring, public data.',
+    });
+  });
+
+  app.get('/api/locations', function(req, res) {
+    axios.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=33.776302,%20-84.390012&radius=24140.2&type=store&keyword=ingles+market&key=${process.env.GOOGLE_PLACES_KEY}`)
+    .then(response => {
+      res.json(response.data.results);
+    })
+    .catch(err => {
+      res.status(400).json({ err: err });
     });
   });
 };

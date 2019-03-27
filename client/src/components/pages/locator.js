@@ -7,9 +7,6 @@ import axios from "axios";
 
 import CurrentLocation from "../gmap";
 
-// GOOGLE PLACES URL, RETURNS JSON LIST OF INGLES MARKETS
-// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=33.776302,%20-84.390012&radius=24140.2&type=store&keyword=ingles+market&key=AIzaSyBGYr7DPVtqsuuoyqzRuB72bRUI0BbJ2Sg
-
 export class StoreLocator extends Component {
   state = {
     showingInfoWindow: false,
@@ -35,13 +32,10 @@ export class StoreLocator extends Component {
   };
 
   componentDidMount() {
-    axios
-      .get(
-        `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=33.776302,%20-84.390012&radius=24140.2&type=store&keyword=ingles+market&key=AIzaSyBGYr7DPVtqsuuoyqzRuB72bRUI0BbJ2Sg`
-      )
+    axios.get('/api/locations')
       .then(response => {
         this.setState({
-          storeLocations: response.data.results
+          storeLocations: response.data
         });
       });
   }
@@ -64,8 +58,7 @@ export class StoreLocator extends Component {
                 name={store.name}
                 placeId={store.place_id}
                 key={store.place_id}
-              >
-              </Marker>
+              />
             ))}
             <InfoWindow
               marker={this.state.activeMarker}
@@ -74,7 +67,16 @@ export class StoreLocator extends Component {
             >
               <div>
                 <h4>{this.state.selectedPlace.name}</h4>
-                <a target='_blank' rel="noopener noreferrer" href={'https://www.google.com/maps/place/?q=place_id:' + this.state.selectedPlace.placeId}>Directions</a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={
+                    "https://www.google.com/maps/place/?q=place_id:" +
+                    this.state.selectedPlace.placeId
+                  }
+                >
+                  Directions
+                </a>
                 <p>{this.state.selectedPlace.place_id}</p>
               </div>
             </InfoWindow>
