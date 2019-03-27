@@ -1,17 +1,27 @@
-import React from 'react';
-// import { Link } from 'react-router-dom'
-// import './landing.css'
+import React from "react";
+import { slide as Menu } from "react-burger-menu";
 
-class Sidebar extends React.Component {
-    state = {}
+import "./styles.css";
 
-    render() {
-        return (
-            <div className='page Sidebar'>
-            <h3>This will be the sidebar</h3>
-                </div>
-        )
-    }
-}
+export default props => {
+  return (
+    
+    <Menu {...props}>
+      <a className="menu-item" href="/">
+        About
+      </a>
 
-export default Sidebar;
+      <a className="menu-item" href="/">
+        Contact
+      </a>
+
+      <a className="menu-item" href="/">
+        Careers
+      </a>
+
+      <a className="menu-item" href="/">
+        Departments
+      </a>
+    </Menu>
+  );
+};

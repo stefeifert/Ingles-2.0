@@ -27,25 +27,25 @@ class LoginForm extends Component {
     }
   };
 
-  render() {
-    return (
-      <form onSubmit={this.submitHandler}>
-        <input
-          type="text"
-          name="username"
-          value={this.state.username}
-          onChange={this.changeHandler}
-        />
-        <input
-          type="password"
-          name="password"
-          value={this.state.password}
-          onChange={this.changeHandler}
-        />
-        <button type="submit">Submit</button>
-      </form>
-    );
-  }
+	render () {
+		return (
+			<form onSubmit={this.submitHandler}>
+				<input
+					type="text"
+					name="username"
+					value={this.state.username}
+					onChange={this.changeHandler}
+				/>
+				<input
+					type="password"
+					name="password"
+					value={this.state.password}
+					onChange={this.changeHandler}
+				/>
+				<button type="submit">Submit</button>
+			</form>
+		);
+	}
 }
 
 export default withRouter(LoginForm);

@@ -3,6 +3,7 @@ import Navbar from '../navbar'
 import Carousel from '../Carousel/Carousel';
 import Container from 'react-bootstrap/Container';
 import '../Carousel/carousel.css';
+import Sidebar from '../sidebar';
 
 const Landing = props => {
     return (

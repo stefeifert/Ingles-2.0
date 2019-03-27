@@ -10,10 +10,10 @@ class Products extends React.Component {
     render() {
         return (
             <div className='page products'>
-            <Navbar />
+                <Navbar />
                 <Sidebar />
-            <h1>Products Page</h1>
-                </div>
+                <h1>Products Page</h1>
+            </div>
         )
     }
 }
