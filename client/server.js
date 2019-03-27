@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-mongoose.connect('mongodb://localhost/noteApp', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/inglesdb', { useNewUrlParser: true });
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
