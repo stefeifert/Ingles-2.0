@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import Navbar from "../navbar";
 import Sidebar from "../sidebar";
 import axios from "axios";
@@ -74,7 +74,7 @@ export class StoreLocator extends Component {
             >
               <div>
                 <h4>{this.state.selectedPlace.name}</h4>
-                <a target='_blank' href={'https://www.google.com/maps/place/?q=place_id:' + this.state.selectedPlace.placeId}>Directions</a>
+                <a target='_blank' rel="noopener noreferrer" href={'https://www.google.com/maps/place/?q=place_id:' + this.state.selectedPlace.placeId}>Directions</a>
                 <p>{this.state.selectedPlace.place_id}</p>
               </div>
             </InfoWindow>
