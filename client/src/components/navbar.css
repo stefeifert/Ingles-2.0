@@ -1,0 +1,14 @@
+a {
+    color: #5e5d55;
+    font-size: 30px;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+a:link {
+    text-decoration: none;
+}
+
+button {
+    font-size: 26px;
+}

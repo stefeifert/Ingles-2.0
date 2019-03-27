@@ -1,53 +1,51 @@
-import React from 'react';
-import Auth from '../utils/Auth';
-import { Link } from 'react-router-dom'
+import React from "react";
+import Auth from "../utils/Auth";
+import "./navbar.css"
+import { Link } from "react-router-dom";
 
 class Navbar extends React.Component {
-    state = {
-      isLoggedIn : false
-    }
+  state = {
+    isLoggedIn: false
+  };
 
-    logout = () => {
-      Auth.logOut(() => {
-        this.setState({ isLoggedIn: false })
-      });
-    }
+  logout = () => {
+    Auth.logOut(() => {
+      this.setState({ isLoggedIn: false });
+    });
+  };
 
-    render() {
-        return (
-            <div>
-              <h3>Ingles</h3>
-              <ul>
-                  <li><a href='coupons'>Coupons</a></li>
-                  <li><a href='about-us'>About Us</a></li>
-              </ul>
-              {Auth.isLoggedIn() ? (
-                <ul>
-                  <li><a href='shopping-list'>Saved Shopping List</a></li>
-                  <li><button onClick={this.logout}>Logout</button></li>
-                  <li>-----</li>
-                  <li><a href='/'>Home</a></li>
-                <li><a href='/login'>Login Here</a></li>
-                <li><a href='products'>Product List</a></li>
-                <li><a href='coupons'>Coupons</a></li>
-                <li><a href='shopping-list'>Saved Shopping List</a></li>
-                <li><a href='store-locator'>Store Locator</a></li>
-                <li><a href='about-us'>About Us</a></li>
-                </ul>
-              ) : (
-                <ul>
-                <li><a href='/'>Home</a></li>
-                <li><a href='/login'>Login Here</a></li>
-                <li><a href='products'>Product List</a></li>
-                <li><a href='coupons'>Coupons</a></li>
-                <li><a href='shopping-list'>Saved Shopping List</a></li>
-                <li><a href='store-locator'>Store Locator</a></li>
-                <li><a href='about-us'>About Us</a></li>
-            </ul>
-              )}
+  render() {
+    return (
+      <div>
+        <h3>
+          <span style = {{ fontFamily: "Fira Sans", fontSize: 80, fontWeight: "bold", color: "#AD3F3F" }}> ingles 2.0 </span>
+        </h3>
+
+        <div>
+
+          {Auth.isLoggedIn() ? (
+            <div style = {{backgroundColor: "#EBC8B2"}}>
+               <a href="/">Home</a> 
+               <a href="products">Product List</a>
+               <a href="shopping-list">Saved Shopping List</a>
+               <a href="store-locator">Store Locator</a> 
+               <a href="coupons">Coupons</a> 
+              <a onClick={this.logout}>Logout</a>
             </div>
-        )
-    }
+          ) : (
+            <div style = {{backgroundColor: "#EBC8B2"}}>
+              <a href="/">Home</a>
+              <a href="/login">Login Here</a>
+              <a href="products">Product List</a>
+              <a href="shopping-list">Saved Shopping List</a>
+              <a href="store-locator">Store Locator</a>
+              <a href="coupons">Coupons</a>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Navbar;
