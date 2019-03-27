@@ -4,10 +4,16 @@ const Schema = mongoose.Schema;
 /**
  * Create a new Task Schema to map Mongo documents to an object in our node application
  */
-var NoteSchema = new Schema({
-  content: String
+var ListSchema = new Schema({
+  user_id: Number,
+  products: [String]
 });
 
-const Note = mongoose.model("Note", NoteSchema);
+const List = mongoose.model("List", ListSchema);
 
-module.exports = Note;
+module.exports = List;
+
+
+
+
+
