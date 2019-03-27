@@ -4,9 +4,14 @@ a {
     padding: 15px;
     padding-left: 20px;
     padding-right: 20px;
+    transition: color 0.5s;
 }
 a:link {
     text-decoration: none;
+}
+a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 button {

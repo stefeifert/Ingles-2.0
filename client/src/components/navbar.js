@@ -35,11 +35,11 @@ class Navbar extends React.Component {
           ) : (
             <div style = {{backgroundColor: "#EBC8B2"}}>
               <a href="/">Home</a>
-              <a href="/login">Login Here</a>
               <a href="products">Product List</a>
               <a href="shopping-list">Saved Shopping List</a>
               <a href="store-locator">Store Locator</a>
               <a href="coupons">Coupons</a>
+              <a href="/login">Login Here</a>
             </div>
           )}
         </div>
