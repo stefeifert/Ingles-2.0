@@ -62,9 +62,9 @@ export class StoreLocator extends Component {
                 position={store.geometry.location}
                 onClick={this.onMarkerClick}
                 name={store.name}
+                placeId={store.place_id}
                 key={store.place_id}
               >
-                <div>'HELLO WORLD'</div>
               </Marker>
             ))}
             <InfoWindow
@@ -74,6 +74,8 @@ export class StoreLocator extends Component {
             >
               <div>
                 <h4>{this.state.selectedPlace.name}</h4>
+                <a target='_blank' href={'https://www.google.com/maps/place/?q=place_id:' + this.state.selectedPlace.placeId}>Directions</a>
+                <p>{this.state.selectedPlace.place_id}</p>
               </div>
             </InfoWindow>
           </CurrentLocation>
