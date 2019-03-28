@@ -18,28 +18,28 @@ class Navbar extends React.Component {
     return (
       <div>
         <h3>
-          <span style = {{ fontFamily: "Fira Sans", fontSize: 80, fontWeight: "bold", color: "#AD3F3F" }}> ingles 2.0 </span>
+          <span style = {{ fontFamily: "Fira Sans", fontSize: 80, fontWeight: "bold", color: "#AD3F3F", paddingLeft: 60 }}> ingles 2.0 </span>
         </h3>
 
         <div>
 
           {Auth.isLoggedIn() ? (
-            <div style = {{backgroundColor: "#EBC8B2"}}>
-               <a href="/">Home</a> 
-               <a href="products">Product List</a>
-               <a href="shopping-list">Saved Shopping List</a>
-               <a href="store-locator">Store Locator</a> 
-               <a href="coupons">Coupons</a> 
-              <a onClick={this.logout}>Logout</a>
+            <div style = {{backgroundColor: "white"}}>
+               <Link className = "navlink" to ="/">Home</Link> 
+               <Link className = "navlink" to ="products">Product List</Link>
+               <Link className = "navlink" to ="shopping-list">Saved Shopping List</Link>
+               <Link className = "navlink" to ="store-locator">Store Locator</Link> 
+               <Link className = "navlink" to ="coupons">Coupons</Link> 
+              <Link className = "navlink"style = {{fontSize: 40, padding: 60}} onClick={this.logout}>Logout</Link>
             </div>
           ) : (
-            <div style = {{backgroundColor: "#EBC8B2"}}>
-              <a href="/">Home</a>
-              <a href="products">Product List</a>
-              <a href="shopping-list">Saved Shopping List</a>
-              <a href="store-locator">Store Locator</a>
-              <a href="coupons">Coupons</a>
-              <a href="/login">Login Here</a>
+            <div style = {{backgroundColor: "white"}}>
+              <Link className = "navlink" to ="/">Home</Link> 
+              <Link className = "navlink" to ="products">Product List</Link>
+              <Link className = "navlink" to ="shopping-list">Saved Shopping List</Link>
+              <Link className = "navlink" to ="store-locator">Store Locator</Link>
+              <Link className = "navlink" to ="coupons">Coupons</Link>
+              <Link className = "navlink" to ="/login">Login Here</Link>
             </div>
           )}
         </div>
