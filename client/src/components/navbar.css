@@ -1,19 +1,23 @@
-a {
-    color: #5e5d55;
+.navlink {
+    color:#898989 ;
     font-size: 30px;
     padding: 15px;
-    padding-left: 20px;
     padding-right: 20px;
     transition: color 0.5s;
 }
-a:link {
+.navlink:link {
     text-decoration: none;
 }
-a:hover {
-    color: white;
+.navlink:hover {
+    color:#5e5d55;
     text-decoration: underline;
 }
 
 button {
     font-size: 26px;
+}
+
+.navlink {
+    font-size: 40px;
+    padding: 60px;
 }

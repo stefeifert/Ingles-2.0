@@ -12,8 +12,8 @@ class AboutUs extends React.Component {
       <div className="page AboutUs">
         <Navbar />
         <Sidebar />
-        <h1>About Us Page</h1>
-        <p>
+        <h1 style = {{textAlign: "center"}}>About Us Page</h1>
+        <p style = {{paddingRight: 100, paddingLeft: 100, fontSize: 20}}>
           Robert Ingle's background certainly qualified him to know the
           preferences of shoppers in his territory. A member of a third
           generation grocery family, he worked in a grocery store started by his
