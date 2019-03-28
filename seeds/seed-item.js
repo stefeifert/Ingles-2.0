@@ -6,9 +6,8 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
   
-  const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/inglesdb";
-  
-  mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/inglesdb";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
   
 const items= [
 

@@ -13,6 +13,10 @@ class ShoppingList extends React.Component {
                 <Navbar />
                 <Sidebar />
                 <h1>Shopping List Page</h1>
+
+
+
+                
             </div>
         )
     }
