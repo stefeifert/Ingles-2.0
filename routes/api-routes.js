@@ -1,4 +1,6 @@
 const User = require('../models/User');
+const Item = require('../models/Item');
+const List = require('../models/List');
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
 
@@ -60,4 +62,24 @@ module.exports = function(app) {
       res.status(400).json({ err: err });
     });
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 };

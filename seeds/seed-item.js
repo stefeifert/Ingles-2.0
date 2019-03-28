@@ -1,5 +1,5 @@
 
-const Item = require ('../models/item');
+const Item = require ('../models/Item');
 const mongoose = require ('mongoose');
 
 if (process.env.NODE_ENV === "production") {

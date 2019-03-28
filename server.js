@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 app.use(authWare);
 
 // Serve up static assets (usually on heroku)
@@ -23,6 +22,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
 
 // Add routes, both API and view
 require('./routes/api-routes')(app);
+// require('./routes/html-routes')(app);
 
 
 // Start the API server
