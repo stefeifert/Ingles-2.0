@@ -63,7 +63,40 @@ module.exports = function(app) {
     });
   });
 
+  app.get('/api/products', function (req, res) {
+    Item.find({})
+      .then(function (data) {
+        res.json(data);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
+  });
 
+ 
+    app.get('/api/products/:id', (req, res) =>{
+      Item.findOne({_id: req.params.id},
+          function(err, item) {
+              if(err) {
+              res.json(err);
+              }
+              else {
+              res.json(item);
+              }
+          });
+  });
+
+ 
+ 
+  // app.post('/api/blogpost', function (req, res) {
+  //   BlogPost.create(req.body)
+  //     .then(function (data) {
+  //       res.json(data);
+  //     })
+  //     .catch(function (err) {
+  //       res.json(err);
+  //     });
+  // });
 
 
 
