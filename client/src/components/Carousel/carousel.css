@@ -1,0 +1,17 @@
+p {
+    color: red;
+}
+
+.container {
+    display: flex;
+    border-radius: 30px;
+}
+
+#imgBox {
+    border-radius: 20px;
+}
+
+.img-size {
+    width: auto !important;
+    box-sizing: inherit;
+}
