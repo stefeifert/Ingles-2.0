@@ -18,7 +18,7 @@ class Register extends React.Component {
     e.preventDefault();
     Auth.register(this.state.username, this.state.password, (response) => {
       this.context.setUser(response);
-      this.props.history.push("/shoppingList");
+      this.props.history.push("/");
     })
   }
 
