@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 // import ReactDOM from "react-dom";
-import Navbar from "../navbar";
-import Sidebar from "../sidebar";
 import axios from "axios";
 
 import CurrentLocation from "../gmap";
@@ -55,8 +53,6 @@ export class StoreLocator extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <Sidebar />
         <h1>Store Locator Page</h1>
         <div>
           <CurrentLocation
