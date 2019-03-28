@@ -10,8 +10,8 @@ const Landing = props => {
         <Container>
         <div>
             <Navbar />
-            <Carousel />
             <h1>Home Page</h1>
+            <Carousel />
         </div>
         </Container>
     )
