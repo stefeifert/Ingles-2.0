@@ -24,22 +24,24 @@ class Navbar extends React.Component {
         <div>
 
           {Auth.isLoggedIn() ? (
-            <div style = {{backgroundColor: "white"}}>
-               <Link className = "navlink" to ="/">Home</Link> 
-               <Link className = "navlink" to ="products">Product List</Link>
-               <Link className = "navlink" to ="shopping-list">Saved Shopping List</Link>
-               <Link className = "navlink" to ="store-locator">Store Locator</Link> 
-               <Link className = "navlink" to ="coupons">Coupons</Link> 
-              <Link className = "navlink"style = {{fontSize: 40, padding: 60}} onClick={this.logout}>Logout</Link>
+            <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
+              
+                <Link className = "navlink hvr-underline-from-center" to ="/">home</Link>       
+                <Link className = "navlink hvr-underline-from-center" to ="products">product list</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="shopping-list">saved shopping list</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="store-locator">store locator</Link> 
+                <Link className = "navlink hvr-underline-from-center" to ="coupons">Coupons</Link> 
+                <Link className = "navlink hvr-underline-from-center"style = {{fontSize: 40}} onClick={this.logout}>Logout</Link>
+
             </div>
           ) : (
-            <div style = {{backgroundColor: "white"}}>
-              <Link className = "navlink" to ="/">Home</Link> 
-              <Link className = "navlink" to ="products">Product List</Link>
-              <Link className = "navlink" to ="shopping-list">Saved Shopping List</Link>
-              <Link className = "navlink" to ="store-locator">Store Locator</Link>
-              <Link className = "navlink" to ="coupons">Coupons</Link>
-              <Link className = "navlink" to ="/login">Login Here</Link>
+            <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
+              <Link className = "navlink hvr-underline-from-center" to ="/">home</Link> 
+              <Link className = "navlink hvr-underline-from-center" to ="products">product list</Link>
+              <Link className = "navlink hvr-underline-from-center" to ="shopping-list">saved shopping list</Link>
+              <Link className = "navlink hvr-underline-from-center" to ="store-locator">store locator</Link>
+              <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link>
+              <Link className = "navlink hvr-underline-from-center" to ="/login">login here</Link>
             </div>
           )}
         </div>
