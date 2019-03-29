@@ -53,45 +53,42 @@ export class StoreLocator extends Component {
   render() {
     return (
       <div>
-        <h1>Store Locator Page</h1>
-        <div>
-          <CurrentLocation
-            centerAroundCurrentLocation
-            google={this.props.google}
-            setCurrentLocation={this.setCurrentLocation}
-            currentLocation={this.state.currentLocation}
+        <CurrentLocation
+          centerAroundCurrentLocation
+          google={this.props.google}
+          setCurrentLocation={this.setCurrentLocation}
+          currentLocation={this.state.currentLocation}
+        >
+          {this.state.storeLocations.map(store => (
+            <Marker
+              position={store.geometry.location}
+              onClick={this.onMarkerClick}
+              name={store.name}
+              placeId={store.place_id}
+              key={store.place_id}
+            />
+          ))}
+          <InfoWindow
+            marker={this.state.activeMarker}
+            visible={this.state.showingInfoWindow}
+            onClose={this.onClose}
           >
-            {this.state.storeLocations.map(store => (
-              <Marker
-                position={store.geometry.location}
-                onClick={this.onMarkerClick}
-                name={store.name}
-                placeId={store.place_id}
-                key={store.place_id}
-              />
-            ))}
-            <InfoWindow
-              marker={this.state.activeMarker}
-              visible={this.state.showingInfoWindow}
-              onClose={this.onClose}
-            >
-              <div>
-                <h4>{this.state.selectedPlace.name}</h4>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={
-                    "https://www.google.com/maps/place/?q=place_id:" +
-                    this.state.selectedPlace.placeId
-                  }
-                >
-                  Directions
-                </a>
-                <p>{this.state.selectedPlace.place_id}</p>
-              </div>
-            </InfoWindow>
-          </CurrentLocation>
-        </div>
+            <div>
+              <h4>{this.state.selectedPlace.name}</h4>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={
+                  "https://www.google.com/maps/place/?q=place_id:" +
+                  this.state.selectedPlace.placeId
+                }
+              >
+                Directions
+              </a>
+              <p>{this.state.selectedPlace.place_id}</p>
+            </div>
+          </InfoWindow>
+        </CurrentLocation>
       </div>
     );
   }

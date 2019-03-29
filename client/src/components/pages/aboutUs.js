@@ -1,10 +1,6 @@
 import React from "react";
 // import { Link } from 'react-router-dom'
 // import './landing.css'
-
-import Navbar from "../navbar";
-import Sidebar from "../sidebar";
-
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -43,7 +39,7 @@ class AboutUs extends React.Component {
             </p>
             </Col>
             <div className="aboutImgBox">
-            <img className="aboutImg" src = '/images/bobingles.jpeg'/>
+            <img className="aboutImg" src = '/images/bobingles.jpeg' alt='bobIngles'/>
             </div>
 
             <div className="aboutBody">
