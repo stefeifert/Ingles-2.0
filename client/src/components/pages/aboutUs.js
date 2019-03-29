@@ -115,8 +115,6 @@ class AboutUs extends React.Component {
     </Row>
 </Container>
 
- 
-</div>
     );
   }
 }
