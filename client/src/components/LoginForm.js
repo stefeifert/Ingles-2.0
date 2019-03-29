@@ -32,13 +32,15 @@ class LoginForm extends Component {
 			<form onSubmit={this.submitHandler}>
 				<input
 					type="text"
-					name="username"
+          name="username"
+          placeholder="username"
 					value={this.state.username}
 					onChange={this.changeHandler}
 				/>
 				<input
 					type="password"
-					name="password"
+          name="password"
+          placeholder='password'
 					value={this.state.password}
 					onChange={this.changeHandler}
 				/>
