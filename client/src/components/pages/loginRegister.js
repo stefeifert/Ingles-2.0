@@ -1,11 +1,10 @@
 import React from "react";
-// import { Link } from 'react-router-dom'
-// import './landing.css'
-import Navbar from "../navbar";
-import Sidebar from "../sidebar";
 import LoginForm from "../LoginForm";
 import RegisterForm from "../registerForm";
 import Container from "react-bootstrap/Container";
+import "../loginRegister.css";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 class LoginAndRegister extends React.Component {
   state = {};
@@ -13,9 +12,18 @@ class LoginAndRegister extends React.Component {
   render() {
     return (
       <Container>
-        <h1>Login or Register</h1>
-        <LoginForm />
-        <RegisterForm />
+          <div style={{marginTop:'50px'}}>
+        <Row>
+            <Col>
+            <h2>Login</h2>
+            <LoginForm />
+          </Col>
+          <Col>
+          <h2>Register</h2>
+            <RegisterForm />
+          </Col>
+        </Row>
+        </div>
       </Container>
     );
   }
