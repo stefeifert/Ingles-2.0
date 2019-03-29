@@ -29,6 +29,7 @@ class Navbar extends React.Component {
                      
                 <Link className = "navlink hvr-underline-from-center" to ="store-locator">store locator</Link> 
                 <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link> 
+                <Link className = "navlink hvr-underline-from-center" to ="bogolist">bogo list</Link>
                 <Link className = "navlink hvr-underline-from-center" to ="/" onClick={this.logout}>logout</Link>
 
             </div>
