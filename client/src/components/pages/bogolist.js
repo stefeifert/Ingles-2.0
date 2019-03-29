@@ -11,16 +11,9 @@ class Bogos extends React.Component {
   state = {
     products: []
   };
-  componentDidMount() {
-    axios.get("/api/bogolist").then(res =>
-      this.setState({
-        products: res.data
-      })
-    );
-  }
 
   componentDidMount() {
-    axios.post("/api/bogolist").then(res =>
+    axios.get("/api/bogolist").then(res =>
       this.setState({
         products: res.data
       })
@@ -65,5 +58,7 @@ class Bogos extends React.Component {
     );
   }
 }
+
+
 
 export default Bogos;
