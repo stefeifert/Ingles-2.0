@@ -7,9 +7,7 @@ export default props => {
   return (
     
     <Menu {...props}>
-      <a className="menu-item" href="products">
-        product list
-      </a>
+      
       
       <a className="menu-item" href="about-us">about us</a>
 
