@@ -3,6 +3,7 @@ const Item = require('../models/Item');
 const List = require('../models/List');
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
+const Bogo = require('../models/Bogo');
 
 module.exports = function(app) {
   app.post('/api/authenticate', function(req, res) {
@@ -90,7 +91,26 @@ module.exports = function(app) {
           });
   });
 
- 
+  app.post('/api/bogolist', function(req, res) {
+    Bogos.create(req.body).then(function(rows) {
+      res.json({ success: true });
+    }).catch(function(error) {
+      res.json({ error: error })
+    });
+  });
+
+  app.get('/api/bogolist', function (req, res) {
+    Bogo.find({})
+      .then(function (data) {
+        res.json(data);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
+  });
+
+
+
  
   // app.post('/api/blogpost', function (req, res) {
   //   BlogPost.create(req.body)

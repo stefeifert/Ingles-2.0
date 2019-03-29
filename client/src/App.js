@@ -7,7 +7,7 @@ import Products from "./components/pages/products.js";
 import Coupons from "./components/pages/coupons.js";
 import LoginAndRegister from "./components/pages/loginRegister";
 import Register from "./components/register";
-import ShoppingList from "./components/pages/shoppingList.js";
+import Bogos from "./components/pages/bogolist.js";
 import StoreLocator from "./components/pages/locator.js";
 import AboutUs from "./components/pages/aboutUs.js";
 import Navbar from "./components/navbar.js";
@@ -37,7 +37,7 @@ class App extends Component {
             <Route exact path="/coupons" component={Coupons} />
             <Route exact path="/login" component={LoginAndRegister} />
             <Route exact path="/register" component={Register} />
-            <Route exact path="/shopping-list" component={ShoppingList} />
+            <Route exact path="/bogolist" component={Bogos} />
             <Route exact path="/store-locator" component={StoreLocator} />
             <Route exact path="/about-us" component={AboutUs} />
           </UserContext.Provider>

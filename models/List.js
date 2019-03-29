@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
  * Create a new Task Schema to map Mongo documents to an object in our node application
  */
 var ListSchema = new Schema({
-  user_id: Number,
+  userid: Number,
   products: [String]
 });
 

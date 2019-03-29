@@ -28,7 +28,7 @@ class Navbar extends React.Component {
               
                 <Link className = "navlink hvr-underline-from-center" to ="/">home</Link>       
                 <Link className = "navlink hvr-underline-from-center" to ="products">product list</Link>
-                <Link className = "navlink hvr-underline-from-center" to ="shopping-list">saved shopping list</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="bogolist">bogos</Link>
                 <Link className = "navlink hvr-underline-from-center" to ="store-locator">store locator</Link> 
                 <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link> 
                 <Link className = "navlink hvr-underline-from-center" onClick={this.logout}>logout</Link>
@@ -38,10 +38,10 @@ class Navbar extends React.Component {
             <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
               <Link className = "navlink hvr-underline-from-center" to ="/">home</Link> 
               <Link className = "navlink hvr-underline-from-center" to ="products">product list</Link>
-              <Link className = "navlink hvr-underline-from-center" to ="shopping-list">saved shopping list</Link>
+              {/* <Link className = "navlink hvr-underline-from-center" to ="bogolist">bogo list</Link> */}
               <Link className = "navlink hvr-underline-from-center" to ="store-locator">store locator</Link>
               <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link>
-              <Link className = "navlink hvr-underline-from-center" to ="/login">login here</Link>
+              <Link className = "navlink hvr-underline-from-center" to ="/login">login advantage buys</Link>
             </div>
           )}
         </div>

@@ -4,16 +4,15 @@ import React from "react";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
-class Products extends React.Component {
+class Bogos extends React.Component {
   state = {
     products: []
   };
   componentDidMount() {
-    axios.get("/api/products").then(res =>
+    axios.get("/api/bogolist").then(res =>
       this.setState({
         products: res.data
       })
@@ -38,7 +37,7 @@ class Products extends React.Component {
                 }
               />
               <Card.Body>
-                <Card.Title>{product.item}</Card.Title>
+                <Card.Title>{product.bogo}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   Advantage Buy! {product.price}
                 </Card.Subtitle>
@@ -56,4 +55,4 @@ class Products extends React.Component {
   }
 }
 
-export default Products;
+export default Bogos;
