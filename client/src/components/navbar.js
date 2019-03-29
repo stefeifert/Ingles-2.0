@@ -24,14 +24,17 @@ class Navbar extends React.Component {
         <div>
 
           {Auth.isLoggedIn() ? (
-            <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
+            <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
               
                 <Link className = "navlink hvr-underline-from-center" to ="/">home</Link>       
                 <Link className = "navlink hvr-underline-from-center" to ="products">product list</Link>
                 <Link className = "navlink hvr-underline-from-center" to ="shopping-list">saved shopping list</Link>
                 <Link className = "navlink hvr-underline-from-center" to ="store-locator">store locator</Link> 
                 <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link> 
-                <Link className = "navlink hvr-underline-from-center"style = {{fontSize: 40}} onClick={this.logout}>logout</Link>
+               
+
+                <Link className = "navlink hvr-underline-from-center" onClick={this.logout}>logout</Link>
+
 
             </div>
           ) : (

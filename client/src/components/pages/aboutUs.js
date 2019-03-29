@@ -1,29 +1,28 @@
 import React from "react";
 // import { Link } from 'react-router-dom'
 // import './landing.css'
+
 import Navbar from "../navbar";
 import Sidebar from "../sidebar";
-import Carousel from "../Carousel/Carousel";
+
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import "../Carousel/carousel.css"
+
 import './aboutUs.css'
+
 
 class AboutUs extends React.Component {
   state = {};
 
   render() {
     return (
-      <div className="pageAboutUs">
-        <Navbar />
-        <Sidebar />
-  
 
   <Container>
   <Row>
     <Col className="aboutTitle">about us</Col>
-    <Col sm={8} className="aboutBody"><p>Robert Ingle's background certainly qualified him to know the
+    <Col sm={8} className="aboutBody">
+          <p>Robert Ingle's background certainly qualified him to know the
             preferences of shoppers in his territory. A member of a third
             generation grocery family, he worked in a grocery store started by his
             grandfather in Asheville, North Carolina where the company

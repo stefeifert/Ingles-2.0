@@ -5,33 +5,47 @@ body {
 
 #App {
   font-family: sans-serif;
-
   /* Give app full page to work with */
   height: 100vh;
-  
 }
 
 #page-wrap {
   text-align: center;
-
   /* Prevent sidebar from showing a scrollbar on page */
   overflow: auto;
-  
 }
 
+/* button */
+.redBtn {
+	background:#c62d1f;
+	background-color:#c62d1f;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	padding:7px 25px;
+	text-decoration:none;
+}
+
+.redBtn:active {
+	position:relative;
+	top:1px;
+}
 
 
 /* Individual item */
 .bm-item {
   display: inline-block;
-
   /* Our sidebar item styling */
   text-decoration: none;
   font-size: 30px;
   margin-bottom: 30px;
   color:#b8b7ad;
   transition: color 0.5s;
-  
 }
 
 /* Change color on hover */
@@ -72,7 +86,6 @@ body {
   background-color: #e3e3e3;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
-  
 } 
 
 

@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const ItemSchema = new Schema({
   item: String,
   price: Number,
-  quantity: Number
+  quantity: Number,
+  filename: String
 });
 
 
