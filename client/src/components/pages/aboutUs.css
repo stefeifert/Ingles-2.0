@@ -1,0 +1,35 @@
+.container {
+    background-color: #E3E3E3;
+    max-width: 80%;
+}
+
+.aboutBody {
+    font-size: 30px;
+    color: black !important;
+    padding: 40px;
+
+}
+
+.aboutTitle {
+    color: white;
+    font-size: 50px;
+    margin: auto;
+    border-bottom: solid 6px #C8AE75;
+    text-align: center;
+    display: inline-block;
+}
+
+.aboutImgBox {
+    margin: 40px;
+    border: #C8AE75;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.aboutImg {
+    margin: 20px;
+    border: white;
+    border-radius: 15px;
+}

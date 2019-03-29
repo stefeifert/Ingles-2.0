@@ -3,30 +3,36 @@ import React from "react";
 // import './landing.css'
 import Navbar from "../navbar";
 import Sidebar from "../sidebar";
+import Carousel from "../Carousel/Carousel";
+import Container from "react-bootstrap/Container";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import "../Carousel/carousel.css"
+import './aboutUs.css'
 
 class AboutUs extends React.Component {
   state = {};
 
   render() {
     return (
-      <div className="page AboutUs">
+      <div className="pageAboutUs">
         <Navbar />
         <Sidebar />
-          <h1 style = {{textAlign: "center"}}>About Us Page</h1>
-          <p style = {{paddingRight: 100, paddingLeft: 100, fontSize: 20}}>
-            Robert Ingle's background certainly qualified him to know the
+  
+
+  <Container>
+  <Row>
+    <Col className="aboutTitle">about us</Col>
+    <Col sm={8} className="aboutBody"><p>Robert Ingle's background certainly qualified him to know the
             preferences of shoppers in his territory. A member of a third
             generation grocery family, he worked in a grocery store started by his
             grandfather in Asheville, North Carolina where the company
-            headquarters is still located.
-          </p>
-          <p>
-            Elmer Ingle closed the family store in 1956 and young Robert attended
+            headquarters is still located.</p>
+            <p>Elmer Ingle closed the family store in 1956 and young Robert attended
             the University of Miami. From 1961 to 1963 he was back in the
             Carolinas working for the chain of Colonial Stores until he secured
-            financing to open his first Ingles store in Asheville in 1963.
-          </p>
-          <p>
+            financing to open his first Ingles store in Asheville in 1963.</p>
+            <p>
             Robert Ingle opened the first Ingles supermarket in Asheville, North
             Carolina in 1963. He saw an opportunity to invest in smaller towns and
             rural communities throughout North and South Carolina that were being
@@ -35,14 +41,20 @@ class AboutUs extends React.Component {
             Tennessee, Alabama and Virginia soon followed. Ingles now operates
             approximately 200 stores in six southeastern states with annual sales
             of almost $4 billion.
-          </p>
-          <p>
+            </p>
+            </Col>
+            <div className="aboutImgBox">
+            <img className="aboutImg" src = '/images/bobingles.jpeg'/>
+            </div>
+
+            <div className="aboutBody">
+            <p>
             The first facility was small, crowded and staffed by Ingle, his wife
             and a small dedicated group of employees. Competition was fierce, with
             chains such as Winn-Dixie, A&P and Colonial controlling 93 percent of
             the area's food sales. Yet Ingle was determined to break in.
-          </p>
-          <p>
+            </p>
+            <p>
             Early on, Ingles implemented a successful strategy of real estate
             investment in the communities it served, often owning the real estate
             on which its stores are located. Ingles today owns two-thirds of the
@@ -55,6 +67,10 @@ class AboutUs extends React.Component {
             generally, ran what he called "a circus" in order to get people in the
             door.
           </p>
+          
+          <div>
+    
+  </div>
           <p>
             In 1982, Ingles found a strategic partner by purchasing a milk
             processing facility. Milkco, Inc., a wholly owned subsidiary, not only
@@ -95,7 +111,13 @@ class AboutUs extends React.Component {
             National Brands and guaranteed by Ingles Markets. Ingles Private Label
             products are named after Mr. Ingle's daughter, Laura Lynn Ingle.
           </p>
-      </div>
+          </div>
+    
+    </Row>
+</Container>
+
+ 
+</div>
     );
   }
 }
