@@ -92,7 +92,7 @@ module.exports = function(app) {
   });
 
   app.post('/api/bogolist', function(req, res) {
-    Bogos.create(req.body).then(function(rows) {
+    Bogo.create(req.body).then(function(rows) {
       res.json({ success: true });
     }).catch(function(error) {
       res.json({ error: error })

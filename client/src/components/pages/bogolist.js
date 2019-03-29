@@ -19,6 +19,17 @@ class Bogos extends React.Component {
     );
   }
 
+  componentDidMount() {
+    axios.post("/api/bogolist").then(res =>
+      this.setState({
+        products: res.data
+      })
+    );
+  }
+
+
+
+
   render() {
     return (
       <Container className="page products">
