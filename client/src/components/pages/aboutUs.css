@@ -1,4 +1,4 @@
-.container {
+.aboutContainer {
     background-color: #E3E3E3;
     max-width: 80%;
 }
@@ -16,7 +16,7 @@
     margin: auto;
     border-bottom: solid 6px #C8AE75;
     text-align: center;
-    display: inline-block;
+    display: inline;
 }
 
 .aboutImgBox {
