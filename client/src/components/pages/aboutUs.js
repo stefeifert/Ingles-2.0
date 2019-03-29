@@ -40,22 +40,23 @@ class AboutUs extends React.Component {
             </Col>
             <div className="aboutImgBox">
             <img className="aboutImg" src = '/images/bobingles.jpeg' alt='bobIngles'/>
+            <h5 style = {{fontStyle: "italic", fontSize: 15, paddingLeft: 12}}>Robert P. Ingle, Ingles Founder</h5>
             </div>
 
             <div className="aboutBody">
-            <p>
+            <p className='btmP'>
             The first facility was small, crowded and staffed by Ingle, his wife
             and a small dedicated group of employees. Competition was fierce, with
             chains such as Winn-Dixie, A&P and Colonial controlling 93 percent of
             the area's food sales. Yet Ingle was determined to break in.
             </p>
-            <p>
+            <p className='btmP'>
             Early on, Ingles implemented a successful strategy of real estate
             investment in the communities it served, often owning the real estate
             on which its stores are located. Ingles today owns two-thirds of the
             real estate on which it operates.
           </p>
-          <p>
+          <p className='btmP'>
             He cut prices, extended store hours to include Sundays and holidays,
             advertised specials, expanded the supermarket, set up mass merchandise
             displays, offered games, stamps and other promotional items and
@@ -63,10 +64,7 @@ class AboutUs extends React.Component {
             door.
           </p>
           
-          <div>
-    
-  </div>
-          <p>
+          <p className='btmP'>
             In 1982, Ingles found a strategic partner by purchasing a milk
             processing facility. Milkco, Inc., a wholly owned subsidiary, not only
             supplies Ingles stores with the freshest dairy products, fruit juices
@@ -75,11 +73,11 @@ class AboutUs extends React.Component {
             has grown from 5 million gallons in 1982 to over 60 million gallons
             today.
           </p>
-          <p>
+          <p className='btmP'>
             In 1987, the Company became publicly traded on the Nasdaq Stock
             Markets's National Market under the symbol IMKTA.
           </p>
-          <p>
+          <p className='btmP'>
             Ingles self-distributes its stores' merchandise from its distribution
             center on the outskirts of Asheville, North Carolina, where its
             headquarters is also located. The distribution center is strategically
@@ -88,19 +86,19 @@ class AboutUs extends React.Component {
             company's highly efficient warehouse and distribution center is within
             250 miles of Ingles' 200+ retail stores.
           </p>
-          <p>
+          <p className='btmP'>
             Ingles strives to provide one-stop shopping convenience to its valued
             customers. Ingles supermarkets offer customers a wide variety of
             nationally advertised food products, including grocery, meat, produce,
             deli and bakery departments. In addition, the company offers
             pharmacies and fuel at the majority of its 200 plus locations.
           </p>
-          <p>
+          <p className='btmP'>
             The same customer focus and commitment to quality and convenience on
             which Robert Ingle founded the business in 1963, continues today
             throughout the organization.
           </p>
-          <p>
+          <p className='btmP'>
             Ingles offers a full variety of brand name products supplemented with
             Ingles' own Laura Lynn brand products which are equal or superior to
             National Brands and guaranteed by Ingles Markets. Ingles Private Label
