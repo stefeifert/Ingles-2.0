@@ -17,11 +17,11 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <Link to="/">
           <h3>
-            <span style = {{ fontFamily: "Fira Sans", fontSize: 80, fontWeight: "bold", color: "#AD3F3F", paddingLeft: 60 }}> ingles 2.0 </span>
+          <Link to="/">
+            <span style = {{ fontFamily: "Fira Sans", fontSize: 80, fontWeight: "bold", color: "#AD3F3F", paddingLeft: 125 }}> ingles 2.0 </span>
+          </Link>
           </h3>
-        </Link>
         <div>
 
           {Auth.isLoggedIn() ? (

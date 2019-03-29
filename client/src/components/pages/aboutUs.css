@@ -4,16 +4,27 @@
 }
 
 .aboutBody {
-    font-size: 30px;
+    font-size: 1.5em;
     color: black !important;
-    padding: 40px;
-
+    padding: 80px;
 }
 
+p {
+    margin-bottom: 50px;
+}
+
+.btmP {
+    padding: 0px 200px 
+}
+
+
+
 .aboutTitle {
-    color: #c62d1f;
+    color: black;
     font-size: 50px;
     margin: auto;
+    border-bottom: solid 6px #ad3f3f;
+
     text-align: center;
     display: inline;
 }
@@ -28,7 +39,7 @@
 }
 
 .aboutImg {
-    margin: 20px;
+    margin: 5px;
     border: white;
     border-radius: 15px;
 }
