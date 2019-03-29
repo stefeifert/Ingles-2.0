@@ -1,6 +1,6 @@
 import React from "react";
 import LoginForm from "../LoginForm";
-import RegisterForm from "../registerForm";
+import RegisterForm from "../register";
 import Container from "react-bootstrap/Container";
 import "../loginRegister.css";
 import Row from "react-bootstrap/Row";
