@@ -26,7 +26,7 @@ class ControlledCarousel extends React.Component {
       const { index, direction } = this.state;
   
       return (
-        <Container className = 'container'>
+        <Container className='carouselContainer'>
 
         
         <Carousel
