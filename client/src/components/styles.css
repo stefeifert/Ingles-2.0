@@ -44,14 +44,15 @@ body {
   text-decoration: none;
   font-size: 30px;
   margin-bottom: 30px;
-  color:#b8b7ad;
-  transition: color 0.5s;
+  color:#898989;
+  transition: color bold 0.5s;
 }
 
 /* Change color on hover */
 .bm-item:hover {
-  color: white;
-  text-decoration: underline;
+  color: #AD3F3F;
+  text-decoration: none !important;
+
 }
 
 /* The rest copied directly from react-burger-menu docs */
@@ -83,7 +84,7 @@ body {
 
 /* General sidebar styles */
 .bm-menu {
-  background-color: #e3e3e3;
+  background-color: #ffffff;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 } 
@@ -105,3 +106,6 @@ body {
   background: rgba(0, 0, 0, 0.3);
 }
 
+#menu-item {
+  text-decoration: none
+}
