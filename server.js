@@ -6,15 +6,9 @@ const authWare = require("./middleware/authware");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-<<<<<<< HEAD
-mongoose.connect('mongodb://localhost/inglesdb', { useNewUrlParser: true });
-
-=======
->>>>>>> f0220c872e6654e5acf1f75af9a872aec57dbb5a
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 app.use(authWare);
 
 // Serve up static assets (usually on heroku)
@@ -28,6 +22,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
 
 // Add routes, both API and view
 require('./routes/api-routes')(app);
+// require('./routes/html-routes')(app);
 
 
 // Start the API server

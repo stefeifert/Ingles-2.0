@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 // import ReactDOM from "react-dom";
-import Navbar from "../navbar";
-import Sidebar from "../sidebar";
 import axios from "axios";
 
 import CurrentLocation from "../gmap";
@@ -12,7 +10,17 @@ export class StoreLocator extends Component {
     showingInfoWindow: false,
     activeMarker: {},
     selectedPlace: {},
-    storeLocations: []
+    storeLocations: [],
+    currentLocation: {
+      lat: 0,
+      lng: 0
+    }
+  };
+
+  setCurrentLocation = location => {
+    this.setState({
+      currentLocation: location
+    });
   };
 
   onMarkerClick = (props, marker, e) =>
@@ -31,25 +39,27 @@ export class StoreLocator extends Component {
     }
   };
 
-  componentDidMount() {
-    axios.get('/api/locations')
-      .then(response => {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.currentLocation !== this.state.currentLocation) {
+      const { lat, lng } = this.state.currentLocation;
+      axios.get(`/api/locations?lat=${lat}&lng=${lng}`).then(response => {
         this.setState({
           storeLocations: response.data
         });
       });
+    }
   }
 
   render() {
     return (
       <div>
-        <Navbar />
-        <Sidebar />
         <h1>Store Locator Page</h1>
         <div>
           <CurrentLocation
             centerAroundCurrentLocation
             google={this.props.google}
+            setCurrentLocation={this.setCurrentLocation}
+            currentLocation={this.state.currentLocation}
           >
             {this.state.storeLocations.map(store => (
               <Marker

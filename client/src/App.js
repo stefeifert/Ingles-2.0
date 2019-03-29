@@ -10,6 +10,8 @@ import Register from "./components/register";
 import ShoppingList from "./components/pages/shoppingList.js";
 import StoreLocator from "./components/pages/locator.js";
 import AboutUs from "./components/pages/aboutUs.js";
+import Navbar from "./components/navbar.js";
+import Sidebar from "./components/sidebar.js";
 
 class App extends Component {
   state = {
@@ -26,6 +28,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <BrowserRouter>
+        <Navbar />
+        <Sidebar />
+        <div>
           <UserContext.Provider value={{ setUser: setUser, user: user }}>
             <Route exact path="/" component={Landing} />
             <Route exact path="/products" component={Products} />
@@ -36,6 +41,7 @@ class App extends Component {
             <Route exact path="/store-locator" component={StoreLocator} />
             <Route exact path="/about-us" component={AboutUs} />
           </UserContext.Provider>
+          </div>
         </BrowserRouter>
       </React.Fragment>
     );

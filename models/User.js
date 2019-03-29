@@ -6,8 +6,17 @@ const Schema = mongoose.Schema;
 // define the User model schema
 const UserSchema = new Schema({
   full_name: String,
-  username: String,
-  password: String
+  username: {
+    type: String,
+    trim: true,
+    // required: "Username is Required"
+  },
+  password: {
+    type: String,
+    trim: true,
+    // required: "Password is Required"
+  },
+  phone: Number
 });
 
 /**
