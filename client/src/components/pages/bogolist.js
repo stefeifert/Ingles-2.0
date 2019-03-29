@@ -4,28 +4,36 @@ import React from "react";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import '../styles.css'
 
-
-class Products extends React.Component {
+class Bogos extends React.Component {
   state = {
     products: []
   };
   componentDidMount() {
-    axios.get("/api/products").then(res =>
+    axios.get("/api/bogolist").then(res =>
       this.setState({
         products: res.data
       })
     );
   }
 
+  componentDidMount() {
+    axios.post("/api/bogolist").then(res =>
+      this.setState({
+        products: res.data
+      })
+    );
+  }
+
+
+
+
   render() {
     return (
       <Container className="page products">
+        <h1>Products Page</h1>
         <Row>
           {this.state.products.map(product => (
             <Card key={product._id} style={{ width: "18rem", margin: "2rem" }}>
@@ -40,11 +48,15 @@ class Products extends React.Component {
                 }
               />
               <Card.Body>
-                <Card.Title>{product.item}</Card.Title>
+                <Card.Title>{product.bogo}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  ${product.price}
+                  Advantage Buy! {product.price}
                 </Card.Subtitle>
-                <p className='redBtn'>Add to List</p>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>
           ))}
@@ -54,4 +66,4 @@ class Products extends React.Component {
   }
 }
 
-export default Products;
+export default Bogos;
