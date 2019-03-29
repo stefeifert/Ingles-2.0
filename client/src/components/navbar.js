@@ -17,31 +17,28 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <h3>
-          <span to="/" style = {{ fontFamily: "Fira Sans", fontSize: 80, fontWeight: "bold", color: "#AD3F3F", paddingLeft: 60 }}> ingles 2.0 </span>
-        </h3>
-
+        <Link to="/">
+          <h3>
+            <span style = {{ fontFamily: "Fira Sans", fontSize: 80, fontWeight: "bold", color: "#AD3F3F", paddingLeft: 60 }}> ingles 2.0 </span>
+          </h3>
+        </Link>
         <div>
 
           {Auth.isLoggedIn() ? (
             <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
-                     
-                <Link className = "navlink hvr-underline-from-center" to ="store-locator">store locator</Link> 
+                <Link className = "navlink hvr-underline-from-center" to ="products">products</Link>      
+                <Link className = "navlink hvr-underline-from-center" to ="store-locator">locations</Link> 
                 <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link> 
-               
-
                 <Link className = "navlink hvr-underline-from-center" onClick={this.logout}>logout</Link>
 
 
             </div>
           ) : (
             <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
-              <Link className = "navlink hvr-underline-from-center" to ="/">home</Link> 
-              <Link className = "navlink hvr-underline-from-center" to ="products">product list</Link>
-              <Link className = "navlink hvr-underline-from-center" to ="shopping-list">saved shopping list</Link>
-              <Link className = "navlink hvr-underline-from-center" to ="store-locator">store locator</Link>
+              <Link className = "navlink hvr-underline-from-center" to ="products">products</Link>
+              <Link className = "navlink hvr-underline-from-center" to ="store-locator">locations</Link>
               <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link>
-              <Link className = "navlink hvr-underline-from-center" to ="/login">login here</Link>
+              <Link className = "navlink hvr-underline-from-center" to ="/login">login</Link>
             </div>
           )}
         </div>

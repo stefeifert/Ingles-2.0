@@ -15,7 +15,6 @@ class Coupons extends React.Component {
     render() {
         return (
             <div className='page Coupons'>
-                <h1> Coupons!</h1>
                 {Auth.isLoggedIn() ? (
                 <div>
                 <img style = {{padding: 10, }}src={DawnCoupon} alt='DawnCoupon' width='650' />
