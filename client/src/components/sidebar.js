@@ -7,19 +7,24 @@ export default props => {
   return (
     
     <Menu {...props}>
-      <a className="menu-item" href="about-us">About Us</a>
+      
+      
+      <a className="menu-item" href="about-us">about us</a>
 
       <a className="menu-item" href="/">
-        Contact
+        contact
       </a>
 
       <a className="menu-item" href="/">
-        Departments
+        departments
       </a>
 
       <a className="menu-item" href="/">
-        Careers
+        careers
       </a>
+
+
+      
     </Menu>
   );
 };

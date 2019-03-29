@@ -6,7 +6,6 @@ import "../Carousel/carousel.css";
 const Landing = props => {
   return (
     <div>
-      <h1>Home Page</h1>
       <Carousel />
     </div>
   );

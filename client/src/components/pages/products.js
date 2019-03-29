@@ -7,6 +7,9 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import '../styles.css'
+
 
 class Products extends React.Component {
   state = {
@@ -23,7 +26,6 @@ class Products extends React.Component {
   render() {
     return (
       <Container className="page products">
-        <h1>Products Page</h1>
         <Row>
           {this.state.products.map(product => (
             <Card key={product._id} style={{ width: "18rem", margin: "2rem" }}>
@@ -40,13 +42,9 @@ class Products extends React.Component {
               <Card.Body>
                 <Card.Title>{product.item}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  Advantage Buy! {product.price}
+                  ${product.price}
                 </Card.Subtitle>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <p className='redBtn'>Add to List</p>
               </Card.Body>
             </Card>
           ))}

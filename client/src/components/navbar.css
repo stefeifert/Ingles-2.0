@@ -4,6 +4,10 @@
     transition: color 0.5s;
 }
 
+a {
+  text-decoration: none !important
+}
+
 .navlink:link {
     text-decoration: none;
 }

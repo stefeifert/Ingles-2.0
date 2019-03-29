@@ -8,32 +8,35 @@ import dogFoodCoupon from '../images/coupons/dogFoodCoupon.jpg'
 import OreoCoupon from '../images/coupons/OreoCoupon.jpg';
 import DawnCoupon from '../images/coupons/DawnCoupon.jpg';
 import brushCoupon from '../images/coupons/brushCoupon.jpg';
+import Container from 'react-bootstrap/Container'
 
 class Coupons extends React.Component {
     state = {}
 
     render() {
         return (
-            <div className='page Coupons'>
-                <h1> Coupons!</h1>
+
+
+            <Container>
+
                 {Auth.isLoggedIn() ? (
                 <div>
-                <img style = {{padding: 10, }}src={DawnCoupon} alt='DawnCoupon' width='650' />
-                <img style = {{padding: 10 }}src={brushCoupon} alt='brushCoupon' width='650' />
-                <img style = {{padding: 10, }}src={OreoCoupon} alt='OreoCoupon' width='650' />
-                <img style = {{padding: 10 }}src={AmysCoupon} alt='AmysCoupon' width='650' />
-                <img style = {{padding: 10, }}src={bananaCoupon} alt='bananaCoupon' width='650' />
-                <img style = {{padding: 10}}src={dogFoodCoupon} alt='dogFoodCoupon' width='650' />
+                <img style = {{padding: 10, }}src={DawnCoupon} alt='DawnCoupon' width='50%' />
+                <img style = {{padding: 10 }}src={brushCoupon} alt='brushCoupon' width='50%' />
+                <img style = {{padding: 10, }}src={OreoCoupon} alt='OreoCoupon' width='50%' />
+                <img style = {{padding: 10 }}src={AmysCoupon} alt='AmysCoupon' width='50%' />
+                <img style = {{padding: 10, }}src={bananaCoupon} alt='bananaCoupon' width='50%' />
+                <img style = {{padding: 10}}src={dogFoodCoupon} alt='dogFoodCoupon' width='50%' />
                 </div>
               ) : (
                   <div>
-                <img style = {{padding: 10}}src={OreoCoupon} alt='OreoCoupon' width='650' />
-                <img style = {{padding: 10}}src={AmysCoupon} alt='AmysCoupon' width='650' />
-                <img style = {{padding: 10}}src={bananaCoupon} alt='bananaCoupon' width='650' />
-                <img style = {{padding: 10}}src={dogFoodCoupon} alt='dogFoodCoupon' width='650' />
+                <img style = {{padding: 10}}src={OreoCoupon} alt='OreoCoupon' width='50%' />
+                <img style = {{padding: 10}}src={AmysCoupon} alt='AmysCoupon' width='50%' />
+                <img style = {{padding: 10}}src={bananaCoupon} alt='bananaCoupon' width='50%' />
+                <img style = {{padding: 10}}src={dogFoodCoupon} alt='dogFoodCoupon' width='50%' />
                 </div>
               )}
-            </div>
+            </Container>
         )
     }
 }
