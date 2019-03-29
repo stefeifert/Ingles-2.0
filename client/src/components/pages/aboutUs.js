@@ -18,7 +18,7 @@ class AboutUs extends React.Component {
   render() {
     return (
 
-  <Container>
+  <Container className="aboutContainer">
   <Row>
     <Col className="aboutTitle">about us</Col>
     <Col sm={8} className="aboutBody">
