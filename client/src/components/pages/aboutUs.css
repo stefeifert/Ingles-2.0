@@ -11,10 +11,9 @@
 }
 
 .aboutTitle {
-    color: white;
+    color: #c62d1f;
     font-size: 50px;
     margin: auto;
-    border-bottom: solid 6px #C8AE75;
     text-align: center;
     display: inline;
 }
