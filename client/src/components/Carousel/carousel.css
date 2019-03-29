@@ -1,8 +1,7 @@
-
-
 .carouselContainer {
     display: flex;
     border-radius: 30px;
+    width: 400px;
 }
 
 #imgBox {
@@ -10,6 +9,6 @@
 }
 
 .img-size {
-    width: auto !important;
-    box-sizing: inherit;
+    width: 1050px !important;
+    box-sizing: border-box;
 }
