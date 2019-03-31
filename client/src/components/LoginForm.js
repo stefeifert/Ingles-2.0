@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import Auth from "../utils/Auth";
+import './loginReg.css'
 
 class LoginForm extends Component {
   static contextType = UserContext;
@@ -35,7 +36,8 @@ class LoginForm extends Component {
           name="username"
           placeholder="username"
 					value={this.state.username}
-					onChange={this.changeHandler}
+          onChange={this.changeHandler}
+          className="loginField"
 				/>
 				<input
 					type="password"
@@ -43,8 +45,9 @@ class LoginForm extends Component {
           placeholder='password'
 					value={this.state.password}
 					onChange={this.changeHandler}
+          className="loginField"
 				/>
-				<button type="submit">Submit</button>
+				<button type="submit" className='redBtn'>Submit</button>
 			</form>
 		);
 	}
