@@ -19,13 +19,6 @@ class Bogos extends React.Component {
     );
   }
 
-  componentDidMount() {
-    axios.post("/api/bogolist").then(res =>
-      this.setState({
-        products: res.data
-      })
-    );
-  }
 
 
 
@@ -33,7 +26,7 @@ class Bogos extends React.Component {
   render() {
     return (
       <Container className="page products">
-        <h1>Products Page</h1>
+        <h3>Advantage Buys</h3>
         <Row>
           {this.state.products.map(product => (
             <Card key={product._id} style={{ width: "18rem", margin: "2rem" }}>
