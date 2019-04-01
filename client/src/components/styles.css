@@ -17,25 +17,24 @@ body {
 
 /* button */
 .redBtn {
-	background:#c62d1f;
-	background-color:#c62d1f;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	display:inline-block;
-  cursor:pointer;
-	color:#ffffff !important;
-	font-size:15px;
-	font-weight:bold;
-	padding:7px 25px;
-	text-decoration:none;
+  background: #c62d1f;
+  background-color: #c62d1f;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 7px 25px;
+  text-decoration: none;
 }
 
 .redBtn:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
-
 
 /* Individual item */
 .bm-item {
@@ -44,15 +43,14 @@ body {
   text-decoration: none;
   font-size: 30px;
   margin-bottom: 30px;
-  color:#898989;
+  color: #898989;
   transition: color bold 0.5s;
 }
 
 /* Change color on hover */
 .bm-item:hover {
-  color: #AD3F3F;
+  color: #ad3f3f;
   text-decoration: none !important;
-
 }
 
 /* The rest copied directly from react-burger-menu docs */
@@ -87,9 +85,7 @@ body {
   background-color: #ffffff;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
-} 
-
-
+}
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
@@ -107,5 +103,5 @@ body {
 }
 
 #menu-item {
-  text-decoration: none
+  text-decoration: none;
 }
