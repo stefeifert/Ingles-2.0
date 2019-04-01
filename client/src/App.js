@@ -12,6 +12,9 @@ import StoreLocator from "./components/pages/locator.js";
 import AboutUs from "./components/pages/aboutUs.js";
 import Navbar from "./components/navbar.js";
 import Sidebar from "./components/sidebar.js";
+import Message from "./components/pages/message.js";
+
+
 
 class App extends Component {
   state = {
@@ -40,6 +43,8 @@ class App extends Component {
             <Route exact path="/bogolist" component={Bogos} />
             <Route exact path="/store-locator" component={StoreLocator} />
             <Route exact path="/about-us" component={AboutUs} />
+            <Route exact path="/message" component={Message} />
+
           </UserContext.Provider>
           </div>
         </BrowserRouter>
