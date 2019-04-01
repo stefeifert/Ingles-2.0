@@ -35,11 +35,11 @@ class Products extends React.Component {
                 }
               />
               <Card.Body>
-                <Card.Title>{product.item}</Card.Title>
+                <Card.Title style={{maxWidth:'100%'}}>{product.item}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   ${product.price}
                 </Card.Subtitle>
-                <p className="redBtn">Add to List</p>
+                <p className="redBtn" style={{width:'100%', textAlign:'center', marginBottom:'0px'}}>Add to List</p>
               </Card.Body>
             </Card>
           ))}
