@@ -2,6 +2,7 @@
 // import './landing.css'
 import axios from "axios";
 import React from 'react';
+import Container from 'react-bootstrap/Container'
 
 
 export default class MessageList extends React.Component {
@@ -44,6 +45,7 @@ export default class MessageList extends React.Component {
 
   render() {
     return (
+      <Container>
       <div>
         <h4>Send a message to your local store</h4>
         <form onSubmit={this.handleSubmit}>
@@ -57,6 +59,7 @@ export default class MessageList extends React.Component {
           <button onClick={this.submitForm} type="submit" >Add</button>
         </form>
       </div>
+      </Container>
     )
   }
 }
