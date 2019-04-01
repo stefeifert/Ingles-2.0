@@ -32,7 +32,6 @@ class Navbar extends React.Component {
                 <Link className = "navlink hvr-underline-from-center" to ="bogolist">specials</Link>
                 <Link className = "navlink hvr-underline-from-center" to ="message">message</Link>
                 <Link className = "navlink hvr-underline-from-center" onClick={this.logout} to="/">logout</Link>
-
             </div>
           ) : (
             <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
