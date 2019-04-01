@@ -5,7 +5,7 @@ import "../Carousel/carousel.css";
 
 const Landing = props => {
   return (
-    <div>
+    <div style={{marginRight:'900px', marginTop:'50px'}}> 
       <Carousel />
     </div>
   );
