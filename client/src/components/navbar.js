@@ -17,9 +17,9 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-          <h3>
+          <h3 className = "ingles">
           <Link to="/">
-            <span style = {{ fontFamily: "Fira Sans", fontSize: 80, fontWeight: "bold", color: "#AD3F3F", paddingLeft: 125 }}> ingles 2.0 </span>
+            <span style = {{fontSize: 80, fontWeight: "bolder", color: "#AD3F3F", paddingLeft: 125 }}> ingles </span>
           </Link>
           </h3>
         <div>
