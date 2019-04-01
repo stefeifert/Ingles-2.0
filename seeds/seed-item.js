@@ -28,7 +28,7 @@ new Item ({ item:"Sauvignon Blanc Noble",price:10.74,quantity:86, filename: 'win
 new Item ({ item:"Scotchbrite Hand Pad",price:3.64, quantity:51, filename: 'scrubbie-scotchbrite-pad.png'}),
 new Item ({ item:"Black Forest Ham",price:3.98,quantity:62, filename: 'black-forest-ham.png'}),
 new Item ({ item:"Plastic Wrap",price:1.18,quantity:100, filename: 'plastic-wrap.png'}),
-new Item ({ item:"Mozzarella Mozarella",price:1.55,quantity:87, filename: 'cheese-mozarella.png'}),
+new Item ({ item:"Mozzarella Cheese",price:1.55,quantity:87, filename: 'cheese-mozarella.png'}),
 new Item ({ item:"Soho Lychee Liqueur",price:14.48,quantity:74, filename: 'soho-lychee-liqueur.png'}),
 new Item ({ item:"White Wine Vinegar",price:4.93,quantity:54, filename: 'vinegar-white-wine.png'}),
 new Item ({ item:"Spaghetti, Dry",price:2.46,quantity:72, filename: 'pasta-spaghetti.png'}),
