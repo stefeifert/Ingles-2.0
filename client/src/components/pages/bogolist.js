@@ -3,30 +3,30 @@ import React from "react";
 // import './landing.css'
 import axios from "axios";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
 class Bogos extends React.Component {
   state = {
-    products: []
+    products: [],
+    user:""
+    
   };
 
-  componentDidMount() {
+    componentDidMount() {
     axios.get("/api/bogolist").then(res =>
       this.setState({
-        products: res.data
+        products: res.data,
+        user: res.user
       })
     );
   }
 
-
-
-
+  
   render() {
     return (
       <Container className="page products">
-        <h1>Products Page</h1>
+        <h3>Claim Your Advantage Buys</h3>
         <Row>
           {this.state.products.map(product => (
             <Card key={product._id} style={{ width: "18rem", margin: "2rem" }}>
@@ -49,7 +49,12 @@ class Bogos extends React.Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                <label class="form-check-label" for="defaultCheck1">
+                 Default checkbox
+                  </label>
+
               </Card.Body>
             </Card>
           ))}
