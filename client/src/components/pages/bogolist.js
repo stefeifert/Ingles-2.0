@@ -13,7 +13,10 @@ class Bogos extends React.Component {
     
   };
 
-    componentDidMount() {
+
+  
+
+  componentDidMount() {
     axios.get("/api/bogolist").then(res =>
       this.setState({
         products: res.data,
@@ -63,5 +66,7 @@ class Bogos extends React.Component {
     );
   }
 }
+
+
 
 export default Bogos;
