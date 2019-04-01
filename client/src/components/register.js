@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import Auth from "../utils/Auth";
+import "./loginReg.css";
 
 class RegisterForm extends React.Component {
   static contextType = UserContext;
@@ -26,24 +27,24 @@ class RegisterForm extends React.Component {
   render() {
     return (
       <form>
-        <label htmlFor="username" />
         <input
           id="username"
           name="username"
           placeholder="username"
           onChange={this.handleInput}
+          className="loginField"
         />
 
-        <label htmlFor="password" />
         <input
           type="password"
           id="password"
           name="password"
           placeholder="password"
           onChange={this.handleInput}
+          className="loginField"
         />
 
-        <button onClick={this.submitForm}>Register</button>
+        <button onClick={this.submitForm} className='redBtn'>Register</button>
       </form>
     );
   }
