@@ -35,7 +35,7 @@ class Products extends React.Component {
                 }
               />
               <Card.Body>
-                <Card.Title style={{maxWidth:'100%'}}>{product.item}</Card.Title>
+                <Card.Title>{product.item}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   ${product.price}
                 </Card.Subtitle>
