@@ -1,6 +1,4 @@
 import React from "react";
-// import { Link } from 'react-router-dom'
-// import './landing.css'
 import axios from "axios";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";

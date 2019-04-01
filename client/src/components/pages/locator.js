@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
-// import ReactDOM from "react-dom";
 import axios from "axios";
 
 import CurrentLocation from "../gmap";
