@@ -26,20 +26,19 @@ class Navbar extends React.Component {
 
           {Auth.isLoggedIn() ? (
             <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
-                     
-                <Link className = "navlink hvr-underline-from-center" to ="store-locator">store locator</Link> 
-                <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link> 
                 <Link className = "navlink hvr-underline-from-center" to ="bogolist">specials</Link>
                 <Link className = "navlink hvr-underline-from-center" to ="message">message</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="products">products</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="store-locator">locations</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link>
                 <Link className = "navlink hvr-underline-from-center" onClick={this.logout} to="/">logout</Link>
             </div>
           ) : (
             <div style = {{backgroundColor: "white", marginBottom: 30, display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
-       
-              <Link className = "navlink hvr-underline-from-center" to ="products">products</Link>
-              <Link className = "navlink hvr-underline-from-center" to ="store-locator">locations</Link>
-              <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link>
-              <Link className = "navlink hvr-underline-from-center" to ="/login">login</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="products">products</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="store-locator">locations</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="coupons">coupons</Link>
+                <Link className = "navlink hvr-underline-from-center" to ="/login">login</Link>
             </div>
           )}
         </div>
