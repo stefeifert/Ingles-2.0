@@ -11,11 +11,7 @@ class Bogos extends React.Component {
     
   };
 
-<<<<<<< HEAD
-  componentDidMount() {
-=======
     componentDidMount() {
->>>>>>> b55621e5401cc40901af446a8aa527a4a748a4b6
     axios.get("/api/bogolist").then(res =>
       this.setState({
         products: res.data,
