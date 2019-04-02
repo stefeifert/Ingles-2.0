@@ -1,7 +1,5 @@
 import React from 'react';
 import Auth from '../../utils/Auth.js';
-// import { Link } from 'react-router-dom'
-// import './landing.css'
 import AmysCoupon from '../images/coupons/AmysCoupon.jpg';
 import bananaCoupon from '../images/coupons/bananaCoupon.jpg';
 import dogFoodCoupon from '../images/coupons/dogFoodCoupon.jpg'

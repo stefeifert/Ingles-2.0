@@ -1,11 +1,10 @@
 import React from "react";
 import Carousel from "../Carousel/Carousel";
-import Container from "react-bootstrap/Container";
 import "../Carousel/carousel.css";
 
 const Landing = props => {
   return (
-    <div>
+    <div style={{marginRight:'900px', marginTop:'50px'}}> 
       <Carousel />
     </div>
   );

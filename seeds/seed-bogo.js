@@ -8,15 +8,15 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
 Bogo.collection.drop();
 
 const bogos = [
-new Bogo ({ bogo:"Assorted Desserts",price:4.97,quantity:42, filename: 'assorted-desserts.png'}),
-new Bogo ({ bogo:"Beef - Tenderloin",price:2.66,quantity:81, filename: 'beef-tenderloin.png'}),
-new Bogo ({ bogo:"Scrubbie - Scotchbrite Hand Pad",price:"$3.64",quantity:51, filename: 'scrubbie-scotchbrite-pad.png'}),
+new Bogo ({ bogo:"Atlantic Salmon, No Skin",price:5.51,quantity:95, filename: 'atlantic-salmon.png'}),
+new Bogo ({ bogo:"Beef Tenderloin",price:2.66,quantity:81, filename: 'beef-tenderloin.png'}),
+new Bogo ({ bogo:"Scotchbrite Hand Pad",price:"$3.64",quantity:51, filename: 'scrubbie-scotchbrite-pad.png'}),
 new Bogo ({ bogo:"Plastic Wrap",price:"$1.18",quantity:100, filename: 'plastic-wrap.png'}),
-new Bogo ({ bogo:"Cheese - Mozzarella",price:0.55,quantity:87, filename: 'cheese-mozarella.png'}),
-new Bogo ({ bogo:"Pasta - Lasagna, Frozen",price:2.33,quantity:94, filename: 'pasta-lasagna-frozen.png'}),
-new Bogo ({ bogo:"Appetizer - Lobster Phyllo Roll",price:1.76,quantity:68, filename: 'appetizer-lobster-phyllo-roll.png'}),
-new Bogo ({ bogo:"Mince Meat - Filling",price:3.31,quantity:69, filename: 'mince-meat-filling.png'}),
-new Bogo ({ bogo:"Soup - Amys, Medium Chili",price:2.30,quantity:63, filename: 'soup-amys-chili.png'})
+new Bogo ({ bogo:"Mozzarella Cheese",price:0.55,quantity:87, filename: 'cheese-mozarella.png'}),
+new Bogo ({ bogo:"Lasagna, Frozen",price:2.33,quantity:94, filename: 'pasta-lasagna-frozen.png'}),
+new Bogo ({ bogo:"Woodwork Pinot Noir",price:16.36,quantity:75, filename: 'wine-pinot-noir-woodwork.png'}),
+new Bogo ({ bogo:"Emma Gnocchi",price:3.74,quantity:55, filename: 'pasta-emma-gnocchi.png'}),
+new Bogo ({ bogo:"Amy's Soup, Medium Chili",price:2.30,quantity:63, filename: 'soup-amys-chili.png'})
 ];
 
 let done = 0;
