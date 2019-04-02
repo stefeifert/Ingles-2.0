@@ -1,8 +1,23 @@
 import axios from "axios";
 import React from "react";
 import Container from "react-bootstrap/Container";
+import swal from "sweetalert";
+
+
+
 
 export default class MessageList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.sweetalertfunction = this.sweetalertfunction.bind(this);
+    
+  }
+
+ sweetalertfunction(){
+   console.log("button clicks")
+   swal("Thank you for your feedback!");
+ }
+
   state = {
     name: "",
     message: "",
@@ -35,8 +50,11 @@ export default class MessageList extends React.Component {
           console.log(res);
           console.log(res.data);
         });
-    };
-  };
+   
+   
+      };
+
+ };
 
   render() {
     return (
@@ -52,17 +70,45 @@ export default class MessageList extends React.Component {
               style={{width:'30%'}}
             />
             <textarea
-              class="form-control"
+              className="form-control"
               placeholder='Comment'
               rows="5"
               id="comment"
               className="loginField"
               style={{width:'30%'}}
             />
-          <button onClick={this.submitForm} type="submit" className='redBtn'>
+          <button onClick={this.sweetalertfunction} type="submit" className='redBtn'>
             Send
           </button>
         </form>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
       </Container>
     );
   }

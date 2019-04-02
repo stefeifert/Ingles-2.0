@@ -1,0 +1,14 @@
+.carouselContainer {
+    display: flex;
+    border-radius: 30px;
+    width: 400px;
+}
+
+#imgBox {
+    border-radius: 20px;
+}
+
+.img-size {
+    width: 1050px !important;
+    box-sizing: border-box;
+}
